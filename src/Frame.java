@@ -1,11 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class Frame {
 
-    ArrayList<JButton> button;
     JFrame frame;
+    PlayButton playButton = new PlayButton();
+    RepeatButton repeatButton = new RepeatButton();
+    StopButton stopButton = new StopButton();
+    NextButton nextButton = new NextButton();
+    PreviousButton previousButton = new PreviousButton();
+
     Frame(){
 
         frame = new JFrame("Music Player");
@@ -13,11 +17,12 @@ public class Frame {
         frame.setSize(400,400);
         frame.setLayout(new FlowLayout());
 
-        this.button = new Button().getButton();
 
-        for(JButton button: this.button){
-            frame.add(button);
-        }
+        frame.add(playButton.getButton());
+        frame.add(repeatButton.getButton());
+        frame.add(stopButton.getButton());
+        frame.add(nextButton.getButton());
+        frame.add(previousButton.getButton());
 
         frame.setVisible(true);
 

@@ -1,12 +1,12 @@
 import javax.swing.*;
 
-public class StopButton extends JButton {
+public class RepeatButton extends JButton {
 
     private JButton button;
 
-    StopButton(){
+    RepeatButton(){
 
-        ImageIcon icon = new ImageIcon("pause.png");
+        ImageIcon icon = new ImageIcon("repeat.png");
         button = new JButton(icon);
         button.setFocusable(false);
 
